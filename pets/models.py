@@ -30,4 +30,3 @@ class Pet(models.Model):
 
     def __repr__(self) -> str:
         return f"Pet ({self.id}) {self.name}"
-
