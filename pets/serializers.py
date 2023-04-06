@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import SexPet
 from groups.serializers import GroupSerializer
 from traits.serializers import TraitSerializer
+from groups.models import Group
 
 
 class PetSerializer(serializers.Serializer):
@@ -13,5 +14,5 @@ class PetSerializer(serializers.Serializer):
         choices=SexPet.choices,
         default=SexPet.NOT_INFORMED
     )
-    group = GroupSerializer()
+    group = GroupSerializer()    
     traits = TraitSerializer(many=True)
